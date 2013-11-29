@@ -29,6 +29,12 @@ if [ "$1" == '' ]
 
 	git push origin master
 
+	echo " "
+	echo "3.1 - Up files: \"push heroku master\" ..."
+	echo " "
+
+	git push heroku master
+
 	if [ $? -eq 0 ]
 	then
 		echo " "
