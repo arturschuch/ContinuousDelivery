@@ -1093,12 +1093,12 @@ var Reveal = (function(){
 	 * @param {Object} event
 	 */
 	function onDocumentKeyDown( event ) {
-		// Check if there's a focused element that could be using 
+		// Check if there's a focused element that could be using
 		// the keyboard
 		var activeElement = document.activeElement;
     	var hasFocus = !!( document.activeElement && ( document.activeElement.type || document.activeElement.href || document.activeElement.contentEditable !== 'inherit' ) );
 
-		// Disregard the event if there's a focused element or a 
+		// Disregard the event if there's a focused element or a
 		// keyboard modifier key is present
 		if ( hasFocus || event.shiftKey || event.altKey || event.ctrlKey || event.metaKey ) return;
 
@@ -1347,6 +1347,11 @@ var Reveal = (function(){
 
 		// Returns the indices of the current, or specified, slide
 		getIndices: getIndices,
+
+		dependencies: [
+			// Remote control your reveal.js presentation using a touch device
+			{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+		]
 
 		// Returns the previous slide element, may be null
 		getPreviousSlide: function() {
