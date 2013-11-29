@@ -1348,10 +1348,10 @@ var Reveal = (function(){
 		// Returns the indices of the current, or specified, slide
 		getIndices: getIndices,
 
-		dependencies: [
+/*		dependencies: [
 			// Remote control your reveal.js presentation using a touch device
 			{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
-		]
+		]*/
 
 		// Returns the previous slide element, may be null
 		getPreviousSlide: function() {

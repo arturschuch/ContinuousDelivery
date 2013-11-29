@@ -185,32 +185,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-		<script src="js/remotes/remotes.ne.min.js"></script>
 
-		<script>
-			new Remotes("preview")
-			.on("swipe-left", function(e){
-			/* what happens when i swipe left on my phone? */
-			})
-			.on("swipe-right", function(e){
-			/* what happens when i swipe right on my phone? */
-			})
-			.on("swipe-up", function(e){
-			/* let's go up */
-			})
-			.on("swipe-down", function(e){
-			/* it's going down */
-			})
-			.on("tap", function(e){
-			/* and the screen explodes */
-			})
-			.on("hold", function(e){
-			/* hold on */
-			})
-			.on("release", function(e){
-			/* hands off */
-			});
-		</script>
 
 		<script>
 
@@ -226,16 +201,28 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
+
+					{ src: 'https://raw.github.com/Remotes/Remotes/master/dist/remotes.ne.min.js', async: true,
+						callback: function() {
+							new Remotes("preview")
+								.on("swipe-left", function(e){ Reveal.navigateRight(); })
+								.on("swipe-right", function(e){ Reveal.navigateLeft(); })
+								.on("swipe-up", function(e){ Reveal.navigateDown(); })
+								.on("swipe-down", function(e){ Reveal.navigateUp(); })
+								.on("tap", function(e){
+									Reveal.toggleOverview();
+								});
+						}
+					},
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
