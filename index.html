@@ -45,47 +45,138 @@
 				</section>
 				<!--end of 1º slide -->
 
-				<!-- 2º slide -->
 				<section class="slide-2">
-					<h1>O que é IC</h1>
+					<h1>O que é C.I.</h1>
 					<img src="images/hudson-500x253.jpg"/>
 				</section>
-				<!-- end of 2º slide -->
 
-				<!-- 3º slide -->
 				<section class="slide-3">
-					<h1>Porque fazer ?</h1>
+					<h1>O que é C.I.</h1>
 
 					<p>
-						Feedback instantâneo
+						<ul>
+						      <li><h3>Integração diversas vezes ao dia</h3></li>
+
+							<li><h3>Requisitos</h3></li>
+
+							<li><h3>Resultado</h3></li>
+						</ul>
 					</p>
+
+					<aside class="notes">
+						Integração diversas vezes ao dia:
+							Funcionalidades pequenas;
+							Testes passando;
+						Requisitos:
+							Build automatizado com testes;
+							Tempo de build menor do que 10 minutos;
+						Resultado:
+							Uma versão funcional a todo o momento;
+					</aside>
+				</section>
+
+				<section class="slide-4">
+					<h1>Resumindo...</h1>
+					<br />
 					<p>
-						Segurança em relação a mudanças
+						Entrega Contínua é uma disciplina de desenvolvimento na qual software é construído de tal maneira que o mesmo pode ser colocado em produção a qualquer momento.
 					</p>
+
+				</section>
+
+
+				<section css="slide-5">
+					<h3>Arquitetura para representar integração Contínua</h3>
+					<img width="400" height="400" src="images/arquitetura.jpg"/>
+
+					<aside class="notes">
+						Na Figura
+						ilustramos uma arquitetura que representa a idéia de integração contínua. Observe que nesse exemplo temos uma equipe com três desenvolvedores realizando mudanças em um mesmo arquivo ou em um conjunto de arquivos que constituem um projeto, compartilhado por um repositório localizado em outra máquina. No exemplo, consideramos que uma ferramenta própria para integração contínua instalada em outra estação é utilizada. A partir dela, poderíamos definir uma hora do dia para executar o build da última versão do projeto em desenvolvimento. Além disso, dependendo da ferramenta utilizada, podemos definir que uma notificação por e-mail deve ser enviada para toda a equipe de desenvolvimento informando se a execução foi realizada com sucesso ou se falhou.
+					</aside>
+				</section>
+
+				<section class="slide-6">
+					<h1>Porque fazer ?</h1>
+					<br />
 					<p>
-						Build Limpo
+						<ul>
+						      <li><h3>Feedback instantâneo</h3></li>
+
+							<li><h3>Segurança em relação a mudanças</h3></li>
+
+							<li><h3>Build Limpo</h3></li>
+						</ul>
 					</p>
 				</section>
-				<!-- end of 3º slide -->
 
-				<!-- 4º slide -->
-				<section class="slide-4">
+				<section class="slide-7">
 					<img width="500" height="500" src="images/hacker.gif"/>
 
-					<p>Porque então não rodar os testes na sua máquina?</p>
-
+					<div>Porque então não rodar os testes na sua máquina?</div>
 				</section>
-				<!-- end of 4º slide -->
 
-				<!-- 5º slide -->
-				<section class="slide-5">
+				<section class="slide-8">
 
 					<h2>Best Practices</h2>
 
 					<p> Pequenos Comits </p>
 
 				</section>
-				<!-- end of 5º slide -->
+
+				<section class="slide-9">
+
+					<h3>Servidores de Integração (Frameworks)</h3>
+					<center>
+						<table>
+							<tr>
+								<td>Cruise Control </td>
+								<td> Hudson</td>
+							</tr>
+							<tr>
+								<td> Continuum </td>
+								<td> Bamboo </td>
+							</tr>
+							<tr>
+								<td>TeamCity </td>
+								<td> BuildBot</td>
+							</tr>
+							<tr>
+								<td> Automated Build Studio </td>
+								<td> AnthillPro </td>
+							</tr>
+						</table>
+
+						<br />
+
+						<h3>Ferramentas</h3>
+
+						<p>
+							CCMenu ou CCtray
+						</p>
+
+						<p>
+							Selenium
+						</p>
+
+						<p>
+							Xvfb
+						</p>
+
+					</center>
+
+				</section>
+
+				<section class="slide-10">
+
+					<h2>Curiosidades</h2>
+
+					<p>Build</p>
+					<p>Commit</p>
+					<p>Update</p>
+					<p>Checkout</p>
+
+				</section>
+
 
 				<section>
 					<img  src="images/the-end.jpg"/>
